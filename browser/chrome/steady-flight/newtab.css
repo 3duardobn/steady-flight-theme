@@ -1,0 +1,36 @@
+/* ==========================================================================
+   STEADY FLIGHT — new tab
+   Shows the original artwork (1366x768) filling the window, anchored to the
+   top, as the Chrome manifest asks (ntp_background_alignment: "top",
+   ntp_background_repeat: "none").
+
+   The image lives in ntp-data.css, embedded as a data: URL because the new
+   tab CSP blocks file://.
+   ========================================================================== */
+
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home"), url-prefix("resource://newtab/") {
+  :root {
+    color-scheme: dark !important;
+
+    --newtab-background-color: #809e88 !important;
+    --newtab-text-primary-color: #ffffff !important;
+    --newtab-background-color-secondary: #2f4035 !important;
+    --newtab-primary-action-background: #d76435 !important;
+  }
+
+  body {
+    background-color: #809e88 !important;
+    background-image: var(--ntp-art) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-attachment: fixed !important;
+  }
+
+  /* To see the whole artwork with no cropping (with bands of green around it
+     on screens that are not 16:9), replace the line above with:
+       background-size: contain !important;
+     For the Chrome behavior (natural size, no scaling), use:
+       background-size: auto !important;
+  */
+}

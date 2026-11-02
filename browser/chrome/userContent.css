@@ -1,0 +1,8 @@
+/* ==========================================================================
+   STEADY FLIGHT — new tab
+   newtab.css defines the layout; ntp-data.css carries the artwork embedded
+   as a data: URL (the new tab CSP blocks file://).
+   ========================================================================== */
+
+@import url("steady-flight/newtab.css");
+@import url("steady-flight/ntp-data.css");

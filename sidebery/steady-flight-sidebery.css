@@ -1,0 +1,169 @@
+/* ==========================================================================
+   STEADY FLIGHT — Sidebery theme
+   Matches the theme of the same name for Firefox-based browsers.
+
+   Main colors:
+     frame / panel ........... #465f4e
+     active tab / highlight .. #5b7763
+     text .................... #ffffff
+     accent (terracotta) ..... #d76435
+     focus / search .......... #d76435
+     taupe from the artwork .. #9e8369
+
+   How to use:
+     Sidebery → Settings → Styles → Styles editor
+     Paste this whole file (replacing the current content) and save.
+     No browser restart needed.
+   ========================================================================== */
+
+#root {
+  color-scheme: dark !important;
+
+  /* ---- palette --------------------------------------------------------- */
+  --sf-frame: #465f4e;
+  --sf-frame-deep: #2f4035;
+  --sf-frame-soft: #5b7763;
+  --sf-toolbar: #5b7763;
+  --sf-ntp: #809e88;
+  --sf-terracotta: #d76435;
+  --sf-terracotta-soft: #e8956d;
+  --sf-taupe: #9e8369;
+  --sf-cream: #e9e0d0;
+  --sf-white: #ffffff;
+  --sf-text: rgba(255, 255, 255, 0.84);
+  --sf-text-dim: rgba(255, 255, 255, 0.64);
+  --sf-line: rgba(255, 255, 255, 0.12);
+  --sf-line-strong: rgba(255, 255, 255, 0.18);
+  --sf-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+
+  /* ---- Sidebery base variables ---------------------------------------- */
+  --s-frame-bg: var(--sf-frame) !important;
+  --s-frame-fg: var(--sf-white) !important;
+  --s-toolbar-bg: var(--sf-frame) !important;
+  --s-toolbar-fg: var(--sf-white) !important;
+  --s-toolbar-border: transparent !important;
+  --s-act-el-bg: var(--sf-frame-soft) !important;
+  --s-act-el-fg: var(--sf-white) !important;
+  --s-act-el-border: rgba(255, 255, 255, 0.1) !important;
+  --s-accent: var(--sf-terracotta) !important;
+  --s-popup-bg: var(--sf-frame-deep) !important;
+  --s-popup-fg: var(--sf-white) !important;
+  --s-popup-border: var(--sf-line) !important;
+
+  /* ---- frame / panel --------------------------------------------------- */
+  --frame-bg: var(--sf-frame) !important;
+  --frame-fg: var(--sf-white) !important;
+  --frame-el-bg: var(--sf-frame-soft) !important;
+  --frame-el-fg: var(--sf-white) !important;
+  --frame-el-shadow: none !important;
+  --frame-el-overlay-hover-bg: rgba(255, 255, 255, 0.08) !important;
+  --frame-el-overlay-clicked-bg: rgba(255, 255, 255, 0.14) !important;
+  --frame-el-overlay-selected-bg: rgba(215, 100, 53, 0.18) !important;
+  --frame-el-overlay-selected-border: var(--sf-terracotta) !important;
+  --frame-scrollbar-color: rgba(255, 255, 255, 0.26) !important;
+
+  /* ---- toolbar / navigation ------------------------------------------- */
+  --toolbar-bg: var(--sf-frame) !important;
+  --toolbar-fg: var(--sf-white) !important;
+  --toolbar-el-overlay-hover-bg: rgba(255, 255, 255, 0.08) !important;
+  --toolbar-el-overlay-clicked-bg: rgba(255, 255, 255, 0.14) !important;
+  --toolbar-el-overlay-active-bg: rgba(255, 255, 255, 0.14) !important;
+  --toolbar-el-overlay-selected-bg: rgba(215, 100, 53, 0.18) !important;
+  --toolbar-el-overlay-selected-border: var(--sf-terracotta) !important;
+  --toolbar-scrollbar-color: rgba(255, 255, 255, 0.26) !important;
+  --border: var(--sf-line) !important;
+
+  /* ---- active element -------------------------------------------------- */
+  --active-el-bg: var(--sf-frame-soft) !important;
+  --active-el-fg: var(--sf-white) !important;
+  --active-el-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  --active-el-overlay-hover-bg: rgba(255, 255, 255, 0.1) !important;
+  --active-el-overlay-clicked-bg: rgba(255, 255, 255, 0.18) !important;
+
+  /* ---- popups / menus -------------------------------------------------- */
+  --popup-bg: var(--sf-frame-deep) !important;
+  --popup-fg: var(--sf-white) !important;
+  --popup-shadow: 0 0 0 1px var(--sf-line), var(--sf-shadow) !important;
+  --popup-scrollbar-color: rgba(255, 255, 255, 0.26) !important;
+
+  --ctx-menu-bg: var(--sf-frame-deep) !important;
+  --ctx-menu-fg: var(--sf-white) !important;
+  --ctx-menu-separator: var(--sf-line) !important;
+  --ctx-menu-shadow: 0 0 0 1px var(--sf-line), var(--sf-shadow) !important;
+
+  /* ---- tabs ------------------------------------------------------------ */
+  --tabs-border-radius: 8px !important;
+  --tabs-normal-bg: transparent !important;
+  --tabs-normal-fg: var(--sf-text) !important;
+  --tabs-activated-bg: var(--sf-frame-soft) !important;
+  --tabs-activated-fg: var(--sf-white) !important;
+  --tabs-activated-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  --tabs-progress-bg: rgba(255, 255, 255, 0.1) !important;
+  --tabs-lvl-opacity: 0.16 !important;
+
+  /* ---- badges / status ------------------------------------------------- */
+  --badge-bg: var(--sf-terracotta) !important;
+  --badge-fg: var(--sf-white) !important;
+  --badge-urgent-bg: var(--sf-terracotta-soft) !important;
+  --badge-urgent-fg: #2f1a10 !important;
+  --status-ok: #9fd6a8 !important;
+  --status-err: #ff8f7a !important;
+  --status-active: var(--sf-taupe) !important;
+  --status-notice: var(--sf-terracotta) !important;
+  --accent: var(--sf-terracotta) !important;
+
+  /* ---- components ------------------------------------------------------ */
+  --general-border-radius: 8px !important;
+  --nav-btn-accent: var(--sf-terracotta) !important;
+  --search-border-radius: 8px !important;
+  --search-shadow: 0 0 0 1px var(--sf-line) !important;
+  --bookmarks-node-activated-fg: var(--sf-white) !important;
+}
+
+/* ==========================================================================
+   Fine-tuning
+   ========================================================================== */
+
+/* Active tab: subtle highlight at the top. */
+.Tab[data-active="true"] > .body {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0) 55%
+  ) !important;
+}
+
+.Tab[data-active="true"] .title {
+  font-weight: 600 !important;
+}
+
+/* Pinned tabs stay visible as small cards. */
+.Tab[data-pin="true"]:not([data-active="true"]) > .body {
+  background-color: var(--sf-frame-soft) !important;
+}
+
+/* Search bar: darker background, like the address bar. */
+.SearchBar:before {
+  background-color: var(--sf-frame-deep) !important;
+  box-shadow: inset 0 0 0 1px var(--sf-line) !important;
+}
+
+.SearchBar[data-focused="true"]:before {
+  box-shadow: inset 0 0 0 1px var(--sf-terracotta) !important;
+}
+
+/* Footer buttons and the new tab button: slightly lighter than the frame. */
+.Sidebar .tool-btn,
+.TabsPanel .new-tab-btn {
+  background-color: var(--sf-frame-soft) !important;
+  box-shadow: inset 0 0 0 1px var(--sf-line) !important;
+}
+
+/* Context menu: soft terracotta hover. */
+.CtxMenu .opt:not([data-inactive="true"]):hover:before,
+.CtxMenu .opt[data-selected="true"]:not([data-inactive="true"]):before,
+.CtxMenu .icon-opt:not([data-inactive="true"]):hover:before,
+.CtxMenu .icon-opt[data-selected="true"]:not([data-inactive="true"]):before {
+  background-color: var(--sf-terracotta) !important;
+  opacity: 0.22 !important;
+}

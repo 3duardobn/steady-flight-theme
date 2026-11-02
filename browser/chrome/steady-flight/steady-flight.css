@@ -1,0 +1,285 @@
+/* ==========================================================================
+   STEADY FLIGHT — theme for Firefox-based browsers
+   Port of the "Steady Flight" theme by Shyama Kuver (Chrome Web Store).
+
+   Original manifest colors:
+     frame          #465f4e   (frame / tab strip)
+     toolbar        #5b7763   (toolbar)
+     ntp_background #809e88   (new tab background)
+     text           #ffffff
+
+   The original artwork ("Steady Flight_cws_1366x768.png") is in ntp.png and
+   is used on the new tab page by newtab.css. This file only styles the
+   browser chrome.
+   ========================================================================== */
+
+:root {
+  /* ---- palette --------------------------------------------------------- */
+  --sf-frame: #465f4e;
+  --sf-frame-deep: #2f4035;
+  --sf-frame-soft: #5b7763;
+  --sf-toolbar: #5b7763;
+  --sf-ntp: #809e88;
+  --sf-terracotta: #d76435;
+  --sf-terracotta-soft: #e8956d;
+  --sf-taupe: #9e8369;
+  --sf-cream: #e9e0d0;
+  --sf-ink: #1d2620;
+
+  /* ---- frame / tabs ---------------------------------------------------- */
+  --lwt-accent-color: var(--sf-frame) !important;
+  --lwt-accent-color-inactive: #3b5044 !important;
+  --lwt-text-color: #ffffff !important;
+  --lwt-tab-text: #ffffff !important;
+
+  --tab-selected-bgcolor: var(--sf-frame-soft) !important;
+  --tab-selected-textcolor: #ffffff !important;
+  --tab-selected-outline-color: transparent !important;
+  --tab-hover-background-color: rgba(255, 255, 255, 0.1) !important;
+  --tab-border-radius: 8px !important;
+  --lwt-tab-line-color: transparent !important;
+  --tab-loading-fill: var(--sf-terracotta) !important;
+  --lwt-background-tab-separator-color: rgba(255, 255, 255, 0.12) !important;
+
+  /* ---- toolbar --------------------------------------------------------- */
+  --toolbar-bgcolor: var(--sf-toolbar) !important;
+  --toolbar-color: #ffffff !important;
+  --chrome-content-separator-color: var(--sf-frame) !important;
+
+  --lwt-toolbarbutton-icon-fill: #ffffff !important;
+  --lwt-toolbarbutton-icon-fill-attention: var(--sf-terracotta-soft) !important;
+  --lwt-toolbarbutton-hover-background: rgba(255, 255, 255, 0.14) !important;
+  --lwt-toolbarbutton-active-background: rgba(255, 255, 255, 0.24) !important;
+  --toolbarbutton-hover-background: rgba(255, 255, 255, 0.14) !important;
+  --toolbarbutton-active-background: rgba(255, 255, 255, 0.24) !important;
+
+  /* ---- address bar ----------------------------------------------------- */
+  --toolbar-field-background-color: var(--sf-frame-deep) !important;
+  --toolbar-field-color: #ffffff !important;
+  --toolbar-field-border-color: rgba(255, 255, 255, 0.22) !important;
+  --toolbar-field-focus-background-color: #24322a !important;
+  --toolbar-field-focus-color: #ffffff !important;
+  --toolbar-field-focus-border-color: var(--sf-terracotta) !important;
+  --toolbar-field-highlight: var(--sf-terracotta) !important;
+  --toolbar-field-highlight-text: var(--sf-frame-deep) !important;
+
+  --urlbarView-highlight-background: var(--sf-frame-soft) !important;
+  --urlbarView-highlight-color: #ffffff !important;
+  --urlbarView-hover-background: rgba(255, 255, 255, 0.08) !important;
+
+  /* ---- sidebar --------------------------------------------------------- */
+  --lwt-sidebar-background-color: var(--sf-frame) !important;
+  --lwt-sidebar-text-color: #ffffff !important;
+  --sidebar-background-color: var(--sf-frame) !important;
+  --sidebar-text-color: #ffffff !important;
+  --sidebar-border-color: rgba(255, 255, 255, 0.12) !important;
+
+  /* ---- panels / menus -------------------------------------------------- */
+  --arrowpanel-background: var(--sf-frame-deep) !important;
+  --arrowpanel-color: #ffffff !important;
+  --arrowpanel-border-color: var(--sf-toolbar) !important;
+
+  --button-background-color-hover: rgba(255, 255, 255, 0.14) !important;
+  --button-background-color-active: rgba(255, 255, 255, 0.24) !important;
+
+  --menu-background-color: var(--sf-frame-deep) !important;
+  --menu-color: #ffffff !important;
+  --menu-border-color: var(--sf-toolbar) !important;
+  --menuitem-hover-background-color: var(--sf-toolbar) !important;
+  --menuitem-hover-color: #ffffff !important;
+  --menu-disabled-color: rgba(255, 255, 255, 0.45) !important;
+
+  /* ---- new tab --------------------------------------------------------- */
+  --newtab-background-color: var(--sf-ntp) !important;
+  --newtab-text-primary-color: #ffffff !important;
+  --newtab-background-color-secondary: var(--sf-frame-deep) !important;
+  --newtab-primary-action-background: var(--sf-terracotta) !important;
+
+  scrollbar-color: var(--sf-toolbar) var(--sf-frame);
+}
+
+/* ==========================================================================
+   Browser structure
+   ========================================================================== */
+
+#titlebar,
+#navigator-toolbox {
+  background-color: var(--sf-frame) !important;
+  background-image: none !important;
+}
+
+#nav-bar {
+  background-color: var(--sf-toolbar) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+#PersonalToolbar {
+  background-color: var(--sf-toolbar) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+#PersonalToolbar .bookmark-item {
+  color: #ffffff !important;
+}
+
+#PersonalToolbar .bookmark-item:hover {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* Sidebar / vertical tabs */
+#sidebar-main,
+sidebar-main,
+#sidebar-box,
+#sidebar,
+.sidebar-panel {
+  background-color: var(--sf-frame) !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+#sidebar-splitter {
+  background-color: var(--sf-frame) !important;
+  border-color: var(--sf-frame) !important;
+}
+
+#sidebar-header,
+#sidebar-panel-header {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
+
+.tabbrowser-tab {
+  color: #ffffff !important;
+}
+
+.tabbrowser-tab .tab-background {
+  border-radius: 8px !important;
+}
+
+.tabbrowser-tab[selected] .tab-background {
+  background-color: var(--sf-frame-soft) !important;
+  background-image: none !important;
+}
+
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:not([selected]):hover .tab-background {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.tabbrowser-tab[selected] .tab-label {
+  color: #ffffff !important;
+}
+
+/* Close button */
+.tab-close-button:hover {
+  background-color: var(--sf-terracotta) !important;
+  fill: #ffffff !important;
+  border-radius: 50% !important;
+}
+
+/* ==========================================================================
+   Address bar
+   ========================================================================== */
+
+#urlbar-background,
+#searchbar {
+  background-color: var(--toolbar-field-background-color) !important;
+  background-image: none !important;
+  border: 1px solid var(--toolbar-field-border-color) !important;
+}
+
+#urlbar:is([focused], [open]) > #urlbar-background {
+  border-color: var(--sf-terracotta) !important;
+  box-shadow: 0 0 0 1px var(--sf-terracotta) !important;
+}
+
+#urlbar-input,
+#searchbar input {
+  color: #ffffff !important;
+}
+
+#urlbar-input::placeholder,
+#searchbar input::placeholder {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* ==========================================================================
+   Menus, panels and findbar
+   ========================================================================== */
+
+menupopup {
+  --menu-background-color: var(--sf-frame-deep) !important;
+  --menu-color: #ffffff !important;
+  --menu-border-color: var(--sf-toolbar) !important;
+  --menuitem-hover-background-color: var(--sf-toolbar) !important;
+  --menuitem-hover-color: #ffffff !important;
+}
+
+menupopup,
+panel {
+  background-color: var(--sf-frame-deep) !important;
+  color: #ffffff !important;
+}
+
+findbar {
+  background-color: var(--sf-frame-deep) !important;
+  color: #ffffff !important;
+  border-top: 1px solid var(--sf-toolbar) !important;
+}
+
+findbar .findbar-textbox {
+  background-color: var(--sf-frame) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+/* ==========================================================================
+   Window
+   ========================================================================== */
+
+#browser,
+#appcontent,
+#tabbrowser-tabbox {
+  background-color: var(--sf-frame) !important;
+}
+
+.titlebar-button {
+  color: #ffffff !important;
+}
+
+.titlebar-button > .toolbarbutton-icon {
+  fill: #ffffff !important;
+}
+
+.titlebar-button:hover {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* ==========================================================================
+   Chrome-faithful variant: light address bar.
+   Uncomment the block below for a white omnibox.
+
+:root {
+  --toolbar-field-background-color: #f5f2ea !important;
+  --toolbar-field-color: var(--sf-ink) !important;
+  --toolbar-field-focus-background-color: #ffffff !important;
+  --toolbar-field-focus-color: var(--sf-ink) !important;
+  --toolbar-field-border-color: rgba(70, 95, 78, 0.22) !important;
+}
+
+#urlbar-input,
+#searchbar input {
+  color: var(--sf-ink) !important;
+}
+
+#urlbar-input::placeholder,
+#searchbar input::placeholder {
+  color: rgba(29, 38, 32, 0.55) !important;
+}
+   ========================================================================== */

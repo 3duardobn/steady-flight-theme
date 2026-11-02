@@ -1,0 +1,35 @@
+/* ==========================================================================
+   STEADY FLIGHT — theme entry point
+   The browser theme itself lives in steady-flight/steady-flight.css.
+   ========================================================================== */
+
+@import url("steady-flight/steady-flight.css");
+
+/* ==========================================================================
+   Personal tweaks (optional)
+   Uncomment to hide the sidebar tools column, the sidebar button and the
+   sidebar header.
+
+#sidebar-tools-and-extensions-splitter,
+.sidebar-panel #sidebar-tools-and-extensions-splitter {
+  display: none !important;
+}
+
+.wrapper > .buttons-wrapper {
+  display: none !important;
+}
+
+.sidebar-panel .wrapper {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+#sidebar-button {
+  display: none !important;
+}
+
+#sidebar-header,
+#sidebar-panel-header {
+  display: none !important;
+}
+   ========================================================================== */

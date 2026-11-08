@@ -1,5 +1,8 @@
 # Steady Flight — theme for Firefox-based browsers
 
+[![0rwx: x](https://img.shields.io/badge/0rwx-x%20%7C%20execute-critical?style=flat-square)](https://0rwx.com)
+
+
 Port of the **Steady Flight** theme (Chrome Web Store) to any Firefox-based
 browser — Firefox, Zen, Waterfox, Floorp and others — plus a matching
 **Sidebery** theme.
@@ -49,6 +52,12 @@ sidebery/
 
 Sidebery: open **Settings → Styles → Styles editor**, paste
 `sidebery/steady-flight-sidebery.css` and save.
+
+## AI Transparency (0rwx: x)
+
+This project adopts the **[0rwx Framework](https://0rwx.com/)** at level **x (Execute / "I curate")**.
+
+Developed using an agentic vibe-coding workflow with AI systems. The human maintainer acts as curator, directing architecture and validating visual fidelity across target browsers. See [0rwx.md](0rwx.md) for policy details.
 
 ## License
 
